@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "Tuneps Document Downloader",
+  "version": "1.0.0",
+  "description": "Lists and downloads every document attached to a Tuneps tender (AO or Consultation) without an eToken.",
+  "icons": {
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.tuneps.tn/*"],
+      "js": ["content/styles.js", "content/api.js", "content/panel.js"],
+      "run_at": "document_idle",
+      "all_frames": false
+    }
+  ]
+}
